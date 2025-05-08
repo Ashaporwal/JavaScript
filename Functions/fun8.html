@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<pre>
+    <script>
+        //WElcome to callback function
+let displayData=(res)=>{
+    return res;
+}
+//agar koi parameter ke andar koi function call hota h toh vhi kahlata h callback function
+
+        let sumData=(num1,num2,result)=>{
+            return result(num1+num2)
+        }
+
+       let output= sumData(20,30,displayData)
+       document.writeln(output)
+    </script>
+</pre>
+</html>
