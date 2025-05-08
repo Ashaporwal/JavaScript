@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+</head>
+<body>
+    
+</body>
+<pre>
+    <script>
+        //WElcome to Filter
+
+        //apke array me koi cheez filter karke dena
+        //new array bnayega
+        //filter ke andar ke element changes nhi honge
+        //kam ho skte hh
+        let l=[99,30,89,90,67,78,68]
+        
+        let filterData=l.filter((v,i)=>v%2==0)
+        {
+            document.writeln(filterData)
+        }
+
+
+        let g=[20,30,78,90,33]
+
+        let filterData2 =g.filter((v,i)=>{
+            if(v%2==0){
+                return true;
+            }
+        })
+    </script>
+</pre>
+</html>
