@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<pre>
+<script>
+        //for-each which used in array
+        //array ko iterate karta hh
+
+        let l=[10,20,30,40,50];
+
+        l.forEach((v,i)=>{
+            document.writeln(v," "+i);
+        })
+
+        //WElcome to map
+
+        let g=[10,20,30,40,50]
+        //map ke pass 3 points hhh.. jo imp hhhh
+        //existing array ko hi return karega means exitsting array me koi changes nhi karta 
+        //Call back function magta h
+//map agar exisiting arrauy ki value me changes karoge to voh ek new array me values ko store kar ke dede ga
+        let finalAns=g.map((v,i)=> v+5)//Array
+
+        document.writeln(finalAns)//ek new array and +5 will be added
+
+
+
+        let finalAns1=g.map(v,i)
+{
+    return v+5
+}
+
+
+
+
+</script>
+</pre>
+</html>
