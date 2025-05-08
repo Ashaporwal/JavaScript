@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+</body>
+<pre>
+    <script>
+        let obj={
+            "cname":"ws",
+            "name":"Amayara",
+            cinfo:function(){
+                console.log(this.cname)
+            }
+        }
+
+        obj.cinfo();
+        //"this" keyword jb normal function ke sath hoga toh voh usi object ko return karta hhh...
+let obj1={
+    "cname":"as",
+    "name":"david",
+    cinfo1:function(){
+        console.log(this.cname)
+    }
+}
+
+obj1.cinfo1();
+
+let obj3={
+    "cname":"python",
+    "name":"avika",
+    cinfo3:()=>{
+        console.log(this);
+    }
+}
+
+obj3.cinfo3();
+//"this" keyword is return window object agar arrow function ka use karke banaya hoga tohh...this is an imp concept
+
+    </script>
+</pre>
+</html>
