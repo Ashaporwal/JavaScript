@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+           
+        }
+        .main{
+            width: 300px;
+             border: 1px solid red;
+            height: 300px;
+        }
+        .container{
+            width: 1320px;
+            margin: auto;
+            display: flex;
+            gap: 20px;
+        }
+        button{
+            margin: 20px auto;
+            padding: 10px 25px;
+            display: block;
+        }
+    </style>
+</head>
+<body>
+ <div class="container">
+    <div class="main">1</div>
+    <div class="main">2</div>
+    <div class="main">3</div>
+    <div class="main">4</div>
+</div>
+<button>Change Color</button>
+</body>
+<script>
+    let btn =document.querySelector("button")
+     
+    let allBoxes=document.getElementsByClassName("main")
+
+
+    btn.addEventListener("click",function(){
+        // console.log(allBoxes)
+
+        // allBoxes[0].style.backgroundColor="yellow"
+        // allBoxes[1].style.backgroundColor="red"
+        //   allBoxes[2].style.backgroundColor="green"
+        //     allBoxes[3].style.backgroundColor="blue"
+    //  alert("hello")
+    for(let items of allBoxes){
+        // console.log(items)
+        items.style.background="yellow"
+        items.style.fontSize="50px"
+        console.log(items.innerHTML)
+    }
+    })
+</script>
+</html>
