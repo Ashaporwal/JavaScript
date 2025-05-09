@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h4>Welcome to addEventListener()</h4>
+    Num1 <input type="text" class="input" placeholder="Enter the first value" /> <br/>
+    Num2 <input type="text" class="input" placeholder="Enter the  SEcond value" /> <br/>
+
+    <button>Save</button>
+    Output <input type="text" class="input" placeholder="Output" /> <br/>
+
+</body>
+<pre>
+    <script>
+        let btn=document.querySelector("button")
+        let allInput =document.querySelectorAll(".input")
+
+//WElocme to addEventListner
+// event + function donoko sath me bind karwa sakte hh
+
+btn.addEventListener("click",()=>{
+    // alert("function")
+    let input1Value=Number(allInput[0].value);
+    let input2Value=Number(allInput[1].value);
+
+    let output=input1Value+input2Value;
+    allInput[2].value=output;
+    allInput[0].value=''
+    allInput[1].value=''
+    // console.log(output)
+})
+    </script>
+</pre>
+</html>
