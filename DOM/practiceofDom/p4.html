@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="first">WElcome to class 1</h1>
+    <h2 class="first">Welcome to SEcond para</h2>
+    <h2 class="third">welcome to third para</h2>
+     <h2 class="fourth">welcome to third para</h2>
+    <h2 class="fourth">welcome to third para</h2>
+    <p>Hello guys</p>
+      <!-- <h2 class="third">welcome to third para</h2>
+       <h2 class="third">welcome to third para</h2> second-->
+
+
+
+<script>
+    // 1.getElementsByClassName()
+
+
+    let element = document.getElementsByClassName("fourth");
+    for(let i=0; i<element.length; i++){
+  element[i].style.backgroundColor = "red";
+    }
+  
+    // 2.getElementsByTagName()
+    let element1 = document.getElementsByTagName("p");
+    for(let j=0; j<element1.length; j++){
+element1[j].style.backgroundColor = 'lightgreen';
+    }
+   
+</script>
+</body>
+</html>
