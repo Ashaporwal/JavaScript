@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    //parent
+    <div style="padding: 1px;
+    margin: 1rem;
+    background-color: rgb(18, 185, 93);">
+        hello good morning
+
+//child
+        <div class="myDiv" style="background-color: rgb(219, 202, 14); padding: auto; text-align: center;">
+<p>First</p>
+<p>Second</p>
+<p>Third</p>
+<p>fourth</p>
+    </div>
+
+    </div>
+
+
+
+
+
+    <script>
+        //according toyour need uh can add the parent child
+        let mydiv=document.querySelector("myDiv");
+        
+        let newElement = document.createElement('span');
+        newElement.textContent = "this is new Batvj";
+        document.body.append(newElement);
+
+        // mydiv.insertAdjacentElement('beforebegin',newElement);
+mydiv.insertAdjacentElement('beforelast',newElement);
+        
+    </script>
+</body>
+</html>

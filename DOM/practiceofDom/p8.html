@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HTML DOM setAttribute() method</title>
+</head>
+<body>
+    <h1>This is all about the setAttribute</h1>
+<div id="code">
+    hello ro everyone
+</div>
+
+
+<p id="demo">THIs is paragraph</p>
+<button onclick="addAttribute()">Add Attribute</button>
+
+
+
+<p id="demo1" title="Example paragraph">This is a paragraph</p>
+<button onclick="getAttributeValue()">Get Attribute Value</button>
+    <script>
+        //1. setAttribute()
+let element=document.getElementById("code")
+element.setAttribute("class","hii");
+
+element.setAttribute("style","background-color:red;");
+
+function addAttribute(){
+    var para = document.getElementById("demo");
+    para.setAttribute("style","color:red; font-size:20px");
+    para.setAttribute("class","highlight")
+}
+
+// 2.getAttribute()
+function getAttributeValue(){
+    var para1 = document.getElementById("demo1");
+    var titleAttribute = para1.getAttribute("title");
+
+    alert("the value of the 'title' attribute is:"+titleAttribute);
+}
+
+    </script>
+</body>
+</html>

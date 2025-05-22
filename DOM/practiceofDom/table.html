@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <style>
+        table,td{
+            border: 1px solid black;
+        }
+        td{
+            padding: 10px;
+        }
+        img{
+            width: 100px;
+            height: 100px;
+        }
+    </style>
+    <!-- <button onclick="createTable()">Click here to craete a table</button> -->
+    <button onclick="addImage()">For adding an image</button>
+    <button onclick="deleteImage()">For Delete an image</button>
+    <!-- <h2 id="result" style="color:black"></h2> -->
+
+     <table id="galleryTable"></table>
+
+    <script>
+        let imageCount = 0;
+
+        function addImage() {
+            const table = document.getElementById("galleryTable");
+
+          if (imageCount % 5 === 0) {
+                var newRow = table.insertRow();
+            } else {
+                var newRow = table.rows[table.rows.length - 1];
+            }
+
+            const cell = newRow.insertCell();
+            const img = document.createElement("img");
+            img.src = "pexels-anjana-c-169994-674010.jpg"; 
+            cell.appendChild(img);
+
+            imageCount++;
+        }
+
+        function deleteImage() {
+            if (imageCount === 0) return;
+
+            const table = document.getElementById("galleryTable");
+            const lastRow = table.rows[table.rows.length - 1];
+            lastRow.deleteCell(-1);
+            imageCount--;
+
+            if (lastRow.cells.length === 0) {
+                table.deleteRow(table.rows.length - 1);
+            }
+        }
+    </script>
+</body>
+</html>

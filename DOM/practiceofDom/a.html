@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+</head>
+<body>
+    <h2>Simple Photo Gallery</h2>
+    <input type="text" id="imageUrl" placeholder="Image Url">
+    <button onclick="addImage()">Add Image</button>
+    
+    <table id="gallery" border="1" width="100%"></table>
+
+    <script>
+        var images = [];
+        function addImage() {
+            var url = document.getElementById("imageUrl").value;
+            if(url) {
+                images.push(url);
+                document.getElementById("imageUrl").value = '';
+                showImages();
+            }
+        }
+
+        function deleteImage(index) {
+            images.splice(index,1);
+            showImages();
+        }
+
+        function showImages() {
+            var table = document.getElementById("gallery");
+            table.innerHTML = '';
+            var row;
+            for(var i=0; i<images.length; i++) {
+                if(i%5===0) row = table.insertRow();
+                var cell = row.insertCell();
+                cell.innerHTML = '<img src ="' + images[i] + '" width="100" height="100"><br><button onclick = "deleteImage(' + i +')">Delete</button'; 
+            }
+        }
+    </script>
+</body>
+</html>

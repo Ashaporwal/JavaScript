@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>getAttribute() Example</title>
+</head>
+<body>
+    <!-- 1.insertAdjacentElement() -->
+    <div id="container">
+  
+    <div id="exist">Existing Element</div>
+    </div>
+    <script>
+  var newElement=document.createElement("div");
+  newElement.textContent="Hello World";
+
+  var existingElement = document.getElementById("exsit");
+  existingElement.insertAdjacentElement('beforebegin',newElement);
+
+    </script>
+</body>
+</html>

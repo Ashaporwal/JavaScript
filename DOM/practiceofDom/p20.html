@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+       let a = document.createElement('button');
+       document.body.appendChild(a);
+       a.setAttribute("style","align-item:center; width:10px; height:10px;color:red;");
+       a.innerText= edit;
+
+    //     localStorage.setItem("myCat", "Tom");
+    //     localStorage.setItem("myclass","13thBatch")
+
+    //     // const cat = localStorage.getItem("myCat");
+
+    //     localStorage.removeItem("myCat");
+const students = [
+  { id: 1, rollNumber: '101', name: 'Aman', branch: 'CSE', yearOfAdmission: 2022 },
+  { id: 2, rollNumber: '102', name: 'Amit', branch: 'ECE', yearOfAdmission: 2021 },
+  { id: 3, rollNumber: '103', name: 'Sahir', branch: 'ME', yearOfAdmission: 2023 },
+  { id: 4, rollNumber: '104', name: 'Manshi', branch: 'CSE', yearOfAdmission: 2020 },
+  { id: 5, rollNumber: '105', name: 'Diptii', branch: 'IT', yearOfAdmission: 2022 },
+  { id: 6, rollNumber: '106', name: 'Fayyaz', branch: 'EEE', yearOfAdmission: 2023 },
+  { id: 7, rollNumber: '107', name: 'Abhishek', branch: 'CE', yearOfAdmission: 2021 },
+  { id: 8, rollNumber: '108', name: 'Devendra', branch: 'CSE', yearOfAdmission: 2020 },
+  { id: 9, rollNumber: '109', name: 'Yogendra', branch: 'IT', yearOfAdmission: 2022 },
+  { id: 10, rollNumber: '110', name: 'Deepak', branch: 'ME', yearOfAdmission: 2021 }
+];
+localStorage.setItem("students", JSON.stringify(students));
+const storedStudents = JSON.parse(localStorage.getItem("students"));
+console.log(storedStudents);
+
+// localStorage.setItem("myclass","students");
+// localStorage.getItem("")
+
+
+    </script>
+
+</body>
+</html>
