@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let promise1 = new Promise((resolve,reject)=>{
+            let success = false;
+            if(success){
+                resolve("hello")
+            }
+            else{
+                reject("Promise reject");
+            }
+        })
+
+        promise1.then((message) => {
+console.log("The ka message:"+message);
+        }).catch((error)=>{
+            console.log("Error: "+error);
+        })
+    </script>
+</body>
+</html>

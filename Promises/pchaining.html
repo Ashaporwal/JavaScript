@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+            let promise1 = new Promise((resolve,reject)=>{
+            let success = true;
+            if(success){
+                resolve("hello")
+            }
+            else{
+                reject("Promise reject");
+            }
+        })
+
+        promise1.then((messsage)=>{
+            console.log("first msg:"+messsage);
+            return "Promise Fulfilled second";
+        }).then((messsage)=>{
+            console.log("Second msg: "+messsage);
+              return "Promise Fulfilled Third";
+        }).then((message=>{
+            console.log("third msg"+message);
+        }))
+    </script>
+</body>
+</html>

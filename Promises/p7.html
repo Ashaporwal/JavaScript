@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        // without await
+//         function orderPizza() {
+//   setTimeout(() => {
+//     console.log("Pizza delivered!");
+//   }, 2000);
+// }
+
+// console.log("Order placed");
+// orderPizza();
+// console.log("Waiting...");
+
+
+//with async/await
+function getPizza() {
+  return new Promise((resolve) => {
+    setTimeout(() => {
+      resolve("Pizza delivered!");
+    }, 2000);
+  });
+}
+
+async function orderPizza() {
+  console.log("Order placed");
+  const result = await getPizza(); // ⏳ Wait until pizza is ready
+  console.log(result); // 🍕
+  console.log("Enjoy your meal!");
+}
+
+orderPizza();
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+             let Promise1 = new Promise((resolve, reject) => {
+            console.log("This is my fisrst Promise");
+            setTimeout(resolve,1000,"first");
+        })
+
+                let Promise2 = new Promise((resolve, reject) => {
+            console.log("This is my second Promise");
+             setTimeout(reject,6000,"second");
+        })
+
+                let Promise3 = new Promise((resolve, reject) => {
+            console.log("This is my Third Promise");
+             setTimeout(resolve,8000,"third");
+        })
+
+                let Promise4 = new Promise((resolve, reject) => {
+            console.log("This is my Fourth Promise");
+             setTimeout(resolve,2000,"fourth");
+        
+        })
+
+        // Promise.all([Promise1,Promise2,Promise3])
+        
+        Promise.all([Promise3,Promise1,Promise3])
+        .then((values)=>{
+            console.log(values);
+        })
+        .catch((error)=>{
+            console.error(error)
+        })
+        
+    </script>
+</body>
+</html>
