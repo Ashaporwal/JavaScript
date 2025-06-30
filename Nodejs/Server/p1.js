@@ -1,8 +1,11 @@
 let http=require("http")
 
-let server=http.createServer( (request,response)=>{
-response.end("WElcome to server")
-})
+import express from "express"
+
+let app = express();
 
 
-server.listen("3000")//http://localhost:3000
+
+
+ 
+app.listen("3000")//http://localhost:3000
