@@ -1,0 +1,101 @@
+1.
+You are building a company system where each employee is assigned exactly one ID card, and each ID card belongs to exactly one employee.
+
+Your job is to:
+
+Create a one-to-one relationship between Employee and IDCard.
+
+Implement full CRUD operations via API endpoints.
+
+Ensure the foreign key is well managed, and cascade behavior is configured.
+
+Employee:
+id           : Integer (Primary Key)
+name         : String
+email        : String
+designation  : String
+joiningDate  : Date
+
+
+
+IDCard:
+
+id           : Integer (Primary Key)
+cardNumber   : String (Unique)
+issueDate    : Date
+expiryDate   : Date
+
+
+
+
+
+Employee Endpoints:
+POST /employees – Create a new employee
+
+GET /employees – Get all employees
+
+GET /employees/:id – Get a specific employee with ID card
+
+PUT /employees/:id – Update employee details
+
+DELETE /employees/:id – Delete employee and associated ID card
+
+🪪 ID Card Endpoints:
+POST /employees/:employeeId/idcard – Issue ID card to employee
+
+GET /employees/:employeeId/idcard – Get employee's ID card
+
+PUT /employees/:employeeId/idcard – Update ID card
+
+DELETE /employees/:employeeId/idcard – Revoke (delete) ID card
+
+
+
+
+2.
+You’re building a hospital management system where each patient has exactly one medical record, and each medical record belongs to one patient only.
+
+Your task is to:
+
+Model this one-to-one relationship using Sequelize.
+
+Provide full REST API support to manage patients and their records.
+
+Patient:
+
+id            : Integer (Primary Key)
+name          : String
+email         : String
+age           : Integer
+gender        : String
+admissionDate : Date
+
+
+MedicalRecord:
+
+id            : Integer (Primary Key)
+bloodGroup    : String
+allergies     : String
+diagnosis     : String
+prescription  : String
+
+
+Patient Endpoints:
+POST /patients – Add a new patient
+
+GET /patients – List all patients
+
+GET /patients/:id – Get patient details with medical record
+
+PUT /patients/:id – Update patient info
+
+DELETE /patients/:id – Remove patient and their record
+
+ Medical Record Endpoints:
+POST /patients/:patientId/record – Create medical record for patient
+
+GET /patients/:patientId/record – Get medical record of patient
+
+PUT /patients/:patientId/record – Update medical record
+
+DELETE /patients/:patientId/record – Delete medical record only
