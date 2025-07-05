@@ -1,0 +1,49 @@
+
+🎯 Project: Hotel Booking System API
+
+📘 Entities & Relationships
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Entity     | Fields
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+Guest      | id, name, email
+Room       | id, roomNumber, type, price
+Booking    | id, guestId, roomId, checkIn, checkOut, status
+Staff      | id, name, role, email
+
+🔗 Relationships
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- One Guest can have many Bookings.
+- One Room can have many Bookings.
+- One Booking belongs to one Guest and one Room.
+- Staff are managed separately (no relationships).
+
+✅ APIs to Implement
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+👤 Guests
+- POST /guests               → Register a new guest
+- GET /guests/:id/bookings  → View bookings of a guest
+
+🛏️ Rooms
+- POST /rooms               → Add a new room
+- GET /rooms                → List all rooms
+- GET /rooms/available?date=YYYY-MM-DD  → Show available rooms on a date
+
+🧾 Bookings
+- POST /bookings            → Book a room (guestId, roomId, checkIn, checkOut)
+- GET /bookings             → List all bookings
+- PATCH /bookings/:id       → Update booking status (Confirmed, Cancelled)
+- DELETE /bookings/:id      → Cancel a booking
+
+👨‍🔧 Staff
+- POST /staff               → Add staff member
+- GET /staff                → List all staff
+
+🔨 Features Covered
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+- ✅ CRUD operations on all models
+- ✅ One-to-many relationships (Guest → Bookings, Room → Bookings)
+- ✅ Sequelize model definitions & associations
+- ✅ Validation (e.g. dates, overlapping bookings)
+- ✅ API status codes & proper error handling
+- ✅ Realistic use-case project to practice Express + Sequelize
+
